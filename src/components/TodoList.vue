@@ -61,8 +61,10 @@ export default {
       let count = 0
       let length = this.list.length
       for (let i in this.list) {
+        // eslint-disable-next-line no-unused-expressions
         this.list[i].status === true ? count += 1 : ''
       }
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       this.count = count
       if (count === length || length === 0) {
         return true
